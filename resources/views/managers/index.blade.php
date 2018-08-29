@@ -38,7 +38,7 @@
                                                         <label for="email" class="form-control-label">Manager Email</label>
                                                     </div>
                                                     <div class="col-md-9">
-                                                        <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                                                     </div>
                                                     <br>
                                                 </div>

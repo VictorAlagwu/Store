@@ -31,7 +31,7 @@ class StoreProductController extends Controller
                     ->where('store_id', $storeproduct['store_id'])
                     ->first();
         if($product){
-            return redirect('stores')->with('error','This product is already existing in this store');
+            return redirect('stores/'.$storeproduct['store_id'])->with('error','This product is already existing in this store');
         }else{
             Storeproduct::create($storeproduct);
             return back();

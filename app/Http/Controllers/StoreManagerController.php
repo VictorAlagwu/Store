@@ -30,7 +30,7 @@ class StoreManagerController extends Controller
                     ->where('store_id', $storemanager['store_id'])
                     ->first();
         if($manager){
-            return redirect('stores')->with('error','This user is already an existing manager of this store');
+            return redirect('stores/'.$storemanager['store_id'])->with('error','This user is already an existing manager of this store');
         }else{
             Storemanager::create($storemanager);
             return back();
